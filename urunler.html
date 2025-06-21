@@ -2,17 +2,53 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ürün Yönetimi – Sirius Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ürünler – Sirius Panel</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      background-color: #f5f6fa;
+    }
+    .sidebar {
+      width: 240px;
+      background-color: #1f2b3d;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      padding-top: 30px;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background-color: #3b4a5a;
+    }
+    .sidebar .submenu {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+    .main-content {
+      margin-left: 240px;
+      padding: 30px;
+      width: calc(100% - 240px);
+    }
     .top-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 20px;
     }
-
     .top-bar button {
       padding: 8px 16px;
       background-color: #4a90e2;
@@ -22,7 +58,6 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .product-table {
       margin-top: 20px;
       width: 100%;
@@ -30,22 +65,18 @@
       background-color: #fff;
       box-shadow: 0 0 6px rgba(0,0,0,0.05);
     }
-
     .product-table th,
     .product-table td {
       padding: 12px;
       border: 1px solid #ddd;
       text-align: left;
     }
-
     .product-table tr:hover {
       background-color: #f9f9f9;
     }
-
     .product-table th {
       background-color: #f1f1f1;
     }
-
     .product-table button {
       background-color: #4a90e2;
       color: #fff;
@@ -54,63 +85,74 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .product-table button:hover {
       background-color: #357ABD;
-    }
-
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
     }
   </style>
 </head>
 <body>
-  <h1>📦 Ürün Yönetimi</h1>
-
-  <div class="top-bar">
-    <p>Mevcut ürünlerinizi aşağıdan görüntüleyebilir veya düzenleyebilirsiniz.</p>
-    <button onclick="alert('Yeni ürün ekleme formu açılacak')">+ Yeni Ürün Ekle</button>
+  <div class="sidebar">
+    <h2>Sirius Panel</h2>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="urunler.html">📦 Ürünler</a>
+    <div class="submenu">
+      <a href="#">- Ürün Yükle (devre dışı)</a>
+    </div>
+    <a href="siparisler.html">🧾 Siparişler</a>
+    <div class="submenu">
+      <a href="#">- İade Talepleri (yakında)</a>
+    </div>
+    <a href="sorular.html">💬 Sorular</a>
+    <a href="analizler.html">📈 Analizler</a>
+    <a href="seo-panel.html">🔍 SEO Paneli</a>
+    <a href="ayarlar.html">⚙️ Ayarlar</a>
+    <a href="moduller.html">🧩 Modüller</a>
+    <a href="index.html">🚪 Çıkış Yap</a>
   </div>
 
-  <table class="product-table">
-    <thead>
-      <tr>
-        <th>Ürün Kodu</th>
-        <th>Ürün Adı</th>
-        <th>Stok</th>
-        <th>Fiyat</th>
-        <th>Durum</th>
-        <th>İşlemler</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>PRD-1001</td>
-        <td>Epoksi Harf Kalıbı</td>
-        <td>35</td>
-        <td>129 TL</td>
-        <td>Aktif</td>
-        <td>
-          <button>Düzenle</button>
-          <button>Sil</button>
-        </td>
-      </tr>
-      <tr>
-        <td>PRD-1002</td>
-        <td>UV Reçine Seti</td>
-        <td>12</td>
-        <td>229 TL</td>
-        <td>Pasif</td>
-        <td>
-          <button>Düzenle</button>
-          <button>Sil</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="main-content">
+    <h1>📦 Ürün Yönetimi</h1>
+    <div class="top-bar">
+      <p>Mevcut ürünlerinizi aşağıdan görüntüleyebilir veya düzenleyebilirsiniz.</p>
+      <button onclick="alert('Yeni ürün ekleme formu açılacak')">+ Yeni Ürün Ekle</button>
+    </div>
+
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Ürün Kodu</th>
+          <th>Ürün Adı</th>
+          <th>Stok</th>
+          <th>Fiyat</th>
+          <th>Durum</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PRD-1001</td>
+          <td>Epoksi Harf Kalıbı</td>
+          <td>35</td>
+          <td>129 TL</td>
+          <td>Aktif</td>
+          <td>
+            <button>Düzenle</button>
+            <button>Sil</button>
+          </td>
+        </tr>
+        <tr>
+          <td>PRD-1002</td>
+          <td>UV Reçine Seti</td>
+          <td>12</td>
+          <td>229 TL</td>
+          <td>Pasif</td>
+          <td>
+            <button>Düzenle</button>
+            <button>Sil</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
