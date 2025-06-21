@@ -3,160 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Müşteri Soruları – Sirius Panel</title>
+  <title>Sorular – Sirius Entegrasyon</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      background-color: #f5f6fa;
-    }
-    .sidebar {
-      width: 240px;
-      background-color: #1f2b3d;
-      color: white;
-      height: 100vh;
-      position: fixed;
-      padding-top: 30px;
-    }
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      transition: 0.2s;
-    }
-    .sidebar a:hover {
-      background-color: #3b4a5a;
-    }
-    .sidebar .submenu {
-      padding-left: 20px;
-      font-size: 14px;
+      background-color: #f4f6fa;
     }
     .main-content {
       margin-left: 240px;
       padding: 30px;
-      width: calc(100% - 240px);
     }
-    .questions-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    .main-content h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
-    .questions-table th,
-    .questions-table td {
-      padding: 12px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-    .questions-table th {
-      background-color: #f1f1f1;
-    }
-    .questions-table tr:hover {
-      background-color: #f9f9f9;
-    }
-    .questions-table button {
-      background-color: #4a90e2;
-      color: #fff;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .quick-replies {
-      margin-top: 40px;
-      background-color: #fff;
+    .soru-kutusu {
+      background-color: white;
       padding: 20px;
       border-radius: 8px;
+      margin-bottom: 20px;
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     }
-    .quick-replies ul {
-      padding-left: 20px;
-      margin-top: 10px;
+    .soru-kutusu strong {
+      color: #333;
     }
-    .quick-replies li {
-      margin-bottom: 8px;
+    .soru-kutusu p {
+      margin: 10px 0;
+      color: #555;
+    }
+    .soru-kutusu textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    .soru-kutusu select {
+      margin-top: 10px;
+      padding: 8px;
+      width: 100%;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .soru-kutusu button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .soru-kutusu button:hover {
+      background-color: #357abd;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Sirius Panel</h2>
-    <a href="dashboard.html">📊 Dashboard</a>
-    <a href="urunler.html">📦 Ürünler</a>
-    <div class="submenu">
-      <a href="#">- Ürün Yükle (devre dışı)</a>
-    </div>
-    <a href="siparisler.html">🧾 Siparişler</a>
-    <div class="submenu">
-      <a href="#">- İade Talepleri (yakında)</a>
-    </div>
-    <a href="sorular.html">💬 Sorular</a>
-    <a href="analizler.html">📈 Analizler</a>
-    <a href="seo-panel.html">🔍 SEO Paneli</a>
-    <a href="ayarlar.html">⚙️ Ayarlar</a>
-    <a href="moduller.html">🧩 Modüller</a>
-    <a href="index.html">🚪 Çıkış Yap</a>
-  </div>
+
+  <div id="menu-placeholder"></div>
 
   <div class="main-content">
     <h1>💬 Müşteri Soruları</h1>
-    <p>En çok sorulan sorular ve yanıtlar burada listelenmiştir.</p>
 
-    <table class="questions-table">
-      <thead>
-        <tr>
-          <th>Soru No</th>
-          <th>Müşteri</th>
-          <th>Ürün</th>
-          <th>Soru</th>
-          <th>Cevap</th>
-          <th>İşlem</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>S-102</td>
-          <td>Betül K.</td>
-          <td>Epoksi Harf Kalıbı</td>
-          <td>Bu kalıp silikon mu?</td>
-          <td>Evet, %100 döküm silikonudur.</td>
-          <td><button>Düzenle</button></td>
-        </tr>
-        <tr>
-          <td>S-103</td>
-          <td>Emir A.</td>
-          <td>Neon Toz Boya</td>
-          <td>Karanlıkta parlıyor mu?</td>
-          <td>Hayır, UV ışıkta parlar.</td>
-          <td><button>Düzenle</button></td>
-        </tr>
-        <tr>
-          <td>S-104</td>
-          <td>Ayşegül Y.</td>
-          <td>UV Reçine Seti</td>
-          <td>Kurutma makinesi pakete dahil mi?</td>
-          <td>Evet, mini UV cihazı dahildir.</td>
-          <td><button>Düzenle</button></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="soru-kutusu">
+      <strong>Ürün:</strong> UV Reçine Seti<br />
+      <strong>Müşteri:</strong> Zeynep Karaca<br />
+      <strong>Soru:</strong>
+      <p>Bu ürün kargo dahil mi? Kaç ml geliyor?</p>
 
-    <div class="quick-replies">
-      <h2>📌 Kayıtlı Cevaplar</h2>
-      <ul>
-        <li>“Ürünümüz döküm için uygundur.”</li>
-        <li>“Stoklarımız günceldir, güvenle sipariş verebilirsiniz.”</li>
-        <li>“Siparişiniz aynı gün kargoya verilir.”</li>
-      </ul>
+      <label for="hazir-cevap">📁 Kayıtlı Mesajlar</label>
+      <select id="hazir-cevap" onchange="cevapYerlestir(this, 'cevap1')">
+        <option value="">Hazır cevap seçin</option>
+        <option value="Merhaba, ürün 100 ml'dir ve kargo dahildir.">Kargo ve hacim bilgisi</option>
+        <option value="Merhaba, siparişiniz 1-2 iş günü içinde kargoya verilir.">Kargolama süresi</option>
+        <option value="Merhaba, ürün açıklamasında tüm detayları görebilirsiniz.">Açıklamaya yönlendirme</option>
+      </select>
+
+      <textarea id="cevap1" rows="4" placeholder="Cevabınızı yazın..."></textarea>
+      <button>Yanıtla</button>
+    </div>
+
+    <div class="soru-kutusu">
+      <strong>Ürün:</strong> Taş Tozu 1kg<br />
+      <strong>Müşteri:</strong> Mehmet Aydın<br />
+      <strong>Soru:</strong>
+      <p>Bu ürün alçı kalıplarında kullanılabilir mi?</p>
+
+      <label for="hazir-cevap2">📁 Kayıtlı Mesajlar</label>
+      <select id="hazir-cevap2" onchange="cevapYerlestir(this, 'cevap2')">
+        <option value="">Hazır cevap seçin</option>
+        <option value="Evet, tüm alçı ve taş kalıplarında kullanılabilir.">Kalıp uyumu</option>
+        <option value="Karışıma uygun pigment ve su ile birlikte kullanmanız önerilir.">Kullanım önerisi</option>
+      </select>
+
+      <textarea id="cevap2" rows="4" placeholder="Cevabınızı yazın..."></textarea>
+      <button>Yanıtla</button>
     </div>
   </div>
+
+  <script>
+    fetch("assets/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+      });
+
+    function cevapYerlestir(selectElement, textareaId) {
+      const textarea = document.getElementById(textareaId);
+      textarea.value = selectElement.value;
+    }
+  </script>
+
 </body>
 </html>
