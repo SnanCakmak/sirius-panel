@@ -1,2 +1,62 @@
-<!-- urunler.html - SiriusPanel v2 -->
-<html><head><title>urunler.html</title></head><body>urunler.html içeriği burada olacak.</body></html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ürünler – Sirius Panel</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <h1>📦 Ürün Yönetimi</h1>
+
+  <button onclick="alert('Yeni ürün ekleme formu açılacak')">+ Yeni Ürün Ekle</button>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="margin-top: 20px; width: 100%; background-color: white;">
+    <thead>
+      <tr>
+        <th>Ürün Kodu</th>
+        <th>Ürün Adı</th>
+        <th>Stok</th>
+        <th>Fiyat</th>
+        <th>Durum</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PRD-1001</td>
+        <td>Epoksi Harf Kalıbı</td>
+        <td>35</td>
+        <td>129 TL</td>
+        <td>Aktif</td>
+        <td>
+          <button>Düzenle</button>
+          <button>Sil</button>
+        </td>
+      </tr>
+      <tr>
+        <td>PRD-1002</td>
+        <td>UV Reçine Seti</td>
+        <td>12</td>
+        <td>229 TL</td>
+        <td>Pasif</td>
+        <td>
+          <button>Düzenle</button>
+          <button>Sil</button>
+        </td>
+      </tr>
+      <tr>
+        <td>PRD-1003</td>
+        <td>Neon Toz Boya – Turuncu</td>
+        <td>56</td>
+        <td>69 TL</td>
+        <td>Aktif</td>
+        <td>
+          <button>Düzenle</button>
+          <button>Sil</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
