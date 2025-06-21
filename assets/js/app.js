@@ -1,0 +1,1 @@
+// JavaScript içeriği buraya gelecek
