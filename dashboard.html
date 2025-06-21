@@ -3,31 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard – Sirius Panel</title>
+  <title>Dashboard – Sirius Entegrasyon</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      background-color: #f5f6fa;
-    }
     .main-content {
       margin-left: 240px;
       padding: 30px;
       width: calc(100% - 240px);
     }
+    .dashboard-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .widget-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
     .widget-box {
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+      flex: 1 1 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    .widget-box h2 {
-      margin-top: 0;
-      font-size: 18px;
+    .widget-box h3 {
+      margin: 0 0 10px;
       color: #333;
+      font-size: 18px;
+    }
+    .widget-box p {
+      margin: 0;
+      color: #555;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -36,21 +45,25 @@
   <div id="menu-placeholder"></div>
 
   <div class="main-content">
-    <h1>📊 Sirius Yönetim Paneli</h1>
+    <div class="dashboard-header">📊 Sirius Entegrasyon – Yönetim Paneli</div>
 
-    <div class="widget-box">
-      <h2>Toplam Sipariş: 143</h2>
-      <p>Son 7 gün içinde 38 sipariş alındı.</p>
-    </div>
-
-    <div class="widget-box">
-      <h2>Yeni Gelen Sorular</h2>
-      <p>4 yeni müşteri sorusu yanıt bekliyor.</p>
-    </div>
-
-    <div class="widget-box">
-      <h2>Stok Uyarısı</h2>
-      <p>3 ürün kritik stok seviyesinde.</p>
+    <div class="widget-container">
+      <div class="widget-box">
+        <h3>🛒 Toplam Sipariş</h3>
+        <p>143 sipariş alındı</p>
+      </div>
+      <div class="widget-box">
+        <h3>💬 Yeni Sorular</h3>
+        <p>4 soru yanıt bekliyor</p>
+      </div>
+      <div class="widget-box">
+        <h3>⚠️ Stok Uyarısı</h3>
+        <p>3 ürün kritik seviyede</p>
+      </div>
+      <div class="widget-box">
+        <h3>🚀 Aktif Kampanyalar</h3>
+        <p>2 kampanya aktif</p>
+      </div>
     </div>
   </div>
 
