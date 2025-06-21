@@ -5,11 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Müşteri Soruları – Sirius Panel</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .questions-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .questions-table th,
+    .questions-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .questions-table th {
+      background-color: #f1f1f1;
+    }
+
+    .questions-table tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .questions-table button {
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .quick-replies {
+      margin-top: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .quick-replies ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .quick-replies li {
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 <body>
   <h1>💬 Müşteri Soruları</h1>
+  <p>En çok sorulan sorular ve yanıtlar burada listelenmiştir.</p>
 
-  <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; background-color: white;">
+  <table class="questions-table">
     <thead>
       <tr>
         <th>Soru No</th>
@@ -48,12 +99,13 @@
     </tbody>
   </table>
 
-  <br><br>
-  <h2>📌 Kayıtlı Cevaplar</h2>
-  <ul>
-    <li>“Ürünümüz döküm için uygundur.”</li>
-    <li>“Stoklarımız günceldir, güvenle sipariş verebilirsiniz.”</li>
-    <li>“Siparişiniz aynı gün kargoya verilir.”</li>
-  </ul>
+  <div class="quick-replies">
+    <h2>📌 Kayıtlı Cevaplar</h2>
+    <ul>
+      <li>“Ürünümüz döküm için uygundur.”</li>
+      <li>“Stoklarımız günceldir, güvenle sipariş verebilirsiniz.”</li>
+      <li>“Siparişiniz aynı gün kargoya verilir.”</li>
+    </ul>
+  </div>
 </body>
 </html>
