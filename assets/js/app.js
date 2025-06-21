@@ -1,4 +1,3 @@
-
 // Giriş ekranı şifre kontrolü
 function kontrolEt() {
   const password = document.getElementById("sifre").value;
