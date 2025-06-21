@@ -3,139 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEO Panel – Sirius Panel</title>
+  <title>SEO Paneli – Sirius Entegrasyon</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      background-color: #f5f6fa;
-    }
-    .sidebar {
-      width: 240px;
-      background-color: #1f2b3d;
-      color: white;
-      height: 100vh;
-      position: fixed;
-      padding-top: 30px;
-    }
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      transition: 0.2s;
-    }
-    .sidebar a:hover {
-      background-color: #3b4a5a;
-    }
-    .sidebar .submenu {
-      padding-left: 20px;
-      font-size: 14px;
+      background-color: #f4f6fa;
     }
     .main-content {
       margin-left: 240px;
       padding: 30px;
-      width: calc(100% - 240px);
     }
-    .seo-form {
-      background-color: #fff;
-      padding: 25px;
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .seo-box {
+      background-color: white;
+      padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 6px rgba(0,0,0,0.05);
-      margin-top: 20px;
+      margin-bottom: 25px;
     }
-    .seo-form label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 6px;
-      margin-top: 16px;
+    .seo-box h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
     }
-    .seo-form input,
-    .seo-form select {
+    .seo-box select,
+    .seo-box textarea {
       width: 100%;
+      font-size: 14px;
       padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      resize: vertical;
     }
-    .seo-form button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #4a90e2;
-      color: #fff;
+    .seo-box button {
+      padding: 10px 16px;
+      font-size: 14px;
       border: none;
       border-radius: 5px;
       font-weight: bold;
+      background-color: #4a90e2;
+      color: white;
       cursor: pointer;
+      margin-right: 10px;
     }
-    .seo-form button:hover {
+    .seo-box button:hover {
       background-color: #357abd;
-    }
-    .seo-output {
-      margin-top: 40px;
-      background-color: #fdfdfd;
-      border-left: 4px solid #4a90e2;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.04);
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Sirius Panel</h2>
-    <a href="dashboard.html">📊 Dashboard</a>
-    <a href="urunler.html">📦 Ürünler</a>
-    <div class="submenu">
-      <a href="#">- Ürün Yükle (devre dışı)</a>
-    </div>
-    <a href="siparisler.html">🧾 Siparişler</a>
-    <div class="submenu">
-      <a href="#">- İade Talepleri (yakında)</a>
-    </div>
-    <a href="sorular.html">💬 Sorular</a>
-    <a href="analizler.html">📈 Analizler</a>
-    <a href="seo-panel.html">🔍 SEO Paneli</a>
-    <a href="ayarlar.html">⚙️ Ayarlar</a>
-    <a href="moduller.html">🧩 Modüller</a>
-    <a href="index.html">🚪 Çıkış Yap</a>
-  </div>
+
+  <div id="menu-placeholder"></div>
 
   <div class="main-content">
-    <h1>🔍 SEO Uyumlu Ürün Açıklama Paneli</h1>
-    <p>Ürün bilgilerini girerek otomatik SEO açıklaması oluşturabilirsiniz.</p>
+    <h1>🔍 SEO Açıklama Paneli</h1>
 
-    <div class="seo-form">
-      <label>Ürün Adı:</label>
-      <input type="text" placeholder="Örn: Harf Kalıbı 5x5 cm">
-
-      <label>Malzeme Türü:</label>
-      <select>
-        <option>Epoksi Reçine</option>
-        <option>Taş Tozu</option>
-        <option>UV Reçine</option>
+    <div class="seo-box">
+      <h2>Ürün Seç</h2>
+      <select id="urun-sec">
+        <option value="">Lütfen ürün seçin</option>
+        <option value="epoksi-harf-kalibi">Epoksi Harf Kalıbı</option>
+        <option value="uv-recine-seti">UV Reçine Seti</option>
+        <option value="tas-tozu-pigment">Taş Tozu Pigment</option>
       </select>
 
-      <label>Boyut Bilgisi:</label>
-      <input type="text" placeholder="Örn: Derinlik 1.8 cm">
+      <button onclick="seoYaz()">🧠 SEO Açıklama Yaz</button>
 
-      <label>Kullanım Alanı:</label>
-      <input type="text" placeholder="Örn: Takı, kolye, anahtarlık">
+      <textarea id="seo-aciklama" rows="6" placeholder="SEO uyumlu açıklama burada görünecek..."></textarea>
 
-      <button onclick="alert('SEO açıklaması hazırlandı!')">✨ SEO Açıklaması Oluştur</button>
-    </div>
-
-    <div class="seo-output">
-      <h2>📄 Örnek Açıklama</h2>
-      <p>
-        Harf Kalıbı 5x5 cm ölçülerindedir. Derinliği 1.8 cm olan bu model, epoksi reçine veya taş tozu ile döküm yapmaya uygundur. Takı, kolye veya anahtarlık gibi birçok hobi projesinde kullanılabilir. Web sitemizden bu ürünü hızlıca temin edebilirsiniz.
-      </p>
+      <button>📌 Açıklamayı Güncelle</button>
+      <button>🔎 Ürün Detayına Git</button>
     </div>
   </div>
+
+  <script>
+    fetch("assets/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+      });
+
+    function seoYaz() {
+      const urun = document.getElementById("urun-sec").value;
+      const textarea = document.getElementById("seo-aciklama");
+      
+      if (urun === "epoksi-harf-kalibi") {
+        textarea.value = "Epoksi harf kalıbı ile kişiye özel dekoratif harfler tasarlayabilirsiniz. UV reçine ve taş tozu ile uyumludur. El yapımı hediye, masa süsü veya anahtarlık olarak kullanılabilir.";
+      } else if (urun === "uv-recine-seti") {
+        textarea.value = "UV reçine seti, hızlı kuruma özelliğiyle takı, kalıp ve mini objeler yapımında idealdir. Kolay uygulanabilir ve kristal parlaklık sağlar.";
+      } else if (urun === "tas-tozu-pigment") {
+        textarea.value = "Taş tozu pigmenti, alçı ve taş dökümlerinizde yoğun renk elde etmenizi sağlar. Epoksi ile de kullanılabilir. Parlak ve mat ton seçenekleri mevcuttur.";
+      } else {
+        textarea.value = "Lütfen bir ürün seçin.";
+      }
+    }
+  </script>
+
 </body>
 </html>
