@@ -5,34 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SEO Panel – Sirius Panel</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .seo-form {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+      margin-top: 30px;
+    }
+
+    .seo-form label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 16px;
+    }
+
+    .seo-form input,
+    .seo-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .seo-form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .seo-form button:hover {
+      background-color: #357abd;
+    }
+
+    .seo-output {
+      margin-top: 40px;
+      background-color: #fdfdfd;
+      border-left: 4px solid #4a90e2;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.04);
+    }
+  </style>
 </head>
 <body>
-  <h1>🔍 SEO Uyumlu Ürün Açıklama Paneli</h1>
+  <h1>🛠️ SEO Uyumlu Ürün Açıklama Paneli</h1>
+  <p>Ürün bilgilerini girerek otomatik SEO açıklaması oluşturabilirsiniz.</p>
 
-  <form style="margin-top: 20px;">
-    <label>Ürün Adı:</label><br>
-    <input type="text" placeholder="Örn: Harf Kalıbı 5x5 cm" style="width: 100%;"><br><br>
+  <div class="seo-form">
+    <label>Ürün Adı:</label>
+    <input type="text" placeholder="Örn: Harf Kalıbı 5x5 cm">
 
-    <label>Malzeme Türü:</label><br>
-    <select style="width: 100%;">
+    <label>Malzeme Türü:</label>
+    <select>
       <option>Epoksi Reçine</option>
       <option>Taş Tozu</option>
       <option>UV Reçine</option>
-    </select><br><br>
+    </select>
 
-    <label>Boyut Bilgisi:</label><br>
-    <input type="text" placeholder="Örn: Derinlik 1.8 cm" style="width: 100%;"><br><br>
+    <label>Boyut Bilgisi:</label>
+    <input type="text" placeholder="Örn: Derinlik 1.8 cm">
 
-    <label>Kullanım Alanı:</label><br>
-    <input type="text" placeholder="Örn: Takı, anahtarlık, kolye" style="width: 100%;"><br><br>
+    <label>Kullanım Alanı:</label>
+    <input type="text" placeholder="Örn: Takı, kolye, anahtarlık">
 
-    <button type="button" onclick="alert('SEO açıklaması oluşturuldu!')">✨ SEO Açıklaması Oluştur</button>
-  </form>
+    <button onclick="alert('SEO açıklaması hazırlandı!')">✨ SEO Açıklaması Oluştur</button>
+  </div>
 
-  <br><br>
-  <h2>📄 Örnek Otomatik Açıklama</h2>
-  <p>
-    Harf Kalıbı 5x5 cm ölçülerindedir. Derinliği 1.8 cm olan bu model, epoksi reçine veya taş tozu ile döküm yapmaya uygundur. Takı, kolye veya anahtarlık gibi birçok hobi projesinde kullanılabilir. 
-  </p>
+  <div class="seo-output">
+    <h2>📄 Örnek Açıklama</h2>
+    <p>
+      Harf Kalıbı 5x5 cm ölçülerindedir. Derinliği 1.8 cm olan bu model, epoksi reçine veya taş tozu ile döküm yapmaya uygundur. Takı, kolye veya anahtarlık gibi birçok hobi projesinde kullanılabilir. Web sitemizden bu ürünü hızlıca temin edebilirsiniz.
+    </p>
+  </div>
 </body>
 </html>
