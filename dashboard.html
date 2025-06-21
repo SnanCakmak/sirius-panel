@@ -1,2 +1,64 @@
-<!-- dashboard.html - SiriusPanel v2 -->
-<html><head><title>dashboard.html</title></head><body>dashboard.html içeriği burada olacak.</body></html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – Sirius Panel</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .dashboard-boxes {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .box {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      width: 200px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .box h2 {
+      margin: 0;
+      font-size: 28px;
+      color: #333;
+    }
+    .box p {
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Sirius Yönetim Paneli</h1>
+  <p>Merhaba, hoş geldiniz! Aşağıdan özet verilere ulaşabilirsiniz:</p>
+
+  <div class="dashboard-boxes">
+    <div class="box">
+      <h2>147</h2>
+      <p>Toplam Sipariş</p>
+    </div>
+    <div class="box">
+      <h2>12</h2>
+      <p>Bugünkü Satış</p>
+    </div>
+    <div class="box">
+      <h2>5</h2>
+      <p>Kritik Stok Ürünü</p>
+    </div>
+    <div class="box">
+      <h2>3</h2>
+      <p>Yeni Müşteri</p>
+    </div>
+    <div class="box">
+      <h2>8</h2>
+      <p>Yeni Soru</p>
+    </div>
+  </div>
+
+  <br><br>
+  <p>📅 Son giriş: 21.06.2025 - 13:30</p>
+</body>
+</html>
