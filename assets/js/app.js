@@ -1,6 +1,5 @@
-// Giriş ekranı şifre kontrolü
-function kontrolEt() {
-  const password = document.getElementById("sifre").value;
+function login() {
+  const password = document.getElementById("password").value;
   if (password === "sinan") {
     window.location.href = "dashboard.html";
   } else {
