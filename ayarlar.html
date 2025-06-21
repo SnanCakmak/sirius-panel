@@ -3,143 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayarlar – Sirius Panel</title>
+  <title>Ayarlar – Sirius Entegrasyon</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      background-color: #f5f6fa;
-    }
-    .sidebar {
-      width: 240px;
-      background-color: #1f2b3d;
-      color: white;
-      height: 100vh;
-      position: fixed;
-      padding-top: 30px;
-    }
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      transition: 0.2s;
-    }
-    .sidebar a:hover {
-      background-color: #3b4a5a;
-    }
-    .sidebar .submenu {
-      padding-left: 20px;
-      font-size: 14px;
+      background-color: #f4f6fa;
     }
     .main-content {
       margin-left: 240px;
       padding: 30px;
-      width: calc(100% - 240px);
     }
-    .settings-form {
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .dropdown {
+      margin-bottom: 20px;
+    }
+    .dropdown button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
       background-color: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.05);
-      margin-top: 20px;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-top: -5px;
     }
-    .settings-form label {
-      font-weight: bold;
+    .dropdown-content label {
       display: block;
       margin-bottom: 6px;
-      margin-top: 16px;
+      font-size: 14px;
     }
-    .settings-form input,
-    .settings-form select {
+    .dropdown-content input {
       width: 100%;
       padding: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 5px;
+      font-size: 14px;
     }
-    .settings-form .checkbox-group {
-      margin-top: 20px;
-    }
-    .settings-form .checkbox-group label {
-      font-weight: normal;
-      display: block;
-      margin-bottom: 8px;
-    }
-    .settings-form button {
-      margin-top: 20px;
-      padding: 10px 20px;
+    .dropdown-content button {
       background-color: #4a90e2;
-      color: #fff;
+      color: white;
+      padding: 10px 16px;
       border: none;
       border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
     }
-    .settings-form button:hover {
-      background-color: #357abd;
-    }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Sirius Panel</h2>
-    <a href="dashboard.html">📊 Dashboard</a>
-    <a href="urunler.html">📦 Ürünler</a>
-    <div class="submenu">
-      <a href="#">- Ürün Yükle (devre dışı)</a>
-    </div>
-    <a href="siparisler.html">🧾 Siparişler</a>
-    <div class="submenu">
-      <a href="#">- İade Talepleri (yakında)</a>
-    </div>
-    <a href="sorular.html">💬 Sorular</a>
-    <a href="analizler.html">📈 Analizler</a>
-    <a href="seo-panel.html">🔍 SEO Paneli</a>
-    <a href="ayarlar.html">⚙️ Ayarlar</a>
-    <a href="moduller.html">🧩 Modüller</a>
-    <a href="index.html">🚪 Çıkış Yap</a>
-  </div>
+
+  <div id="menu-placeholder"></div>
 
   <div class="main-content">
-    <h1>⚙️ Panel & Entegrasyon Ayarları</h1>
-    <p>Mağaza bilgilerinizi ve pazaryeri entegrasyonlarını bu alandan yapılandırabilirsiniz.</p>
+    <h1>⚙️ Pazaryeri Entegrasyon Ayarları</h1>
 
-    <div class="settings-form">
-      <label>Pazaryeri Seçin:</label>
-      <select>
-        <option>Trendyol</option>
-        <option>Hepsiburada</option>
-        <option>N11</option>
-        <option>PttAVM</option>
-        <option>IdeaSoft</option>
-      </select>
-
-      <label>Mağaza Adı:</label>
-      <input type="text" placeholder="Örn: Sirius Hobi Malzemeleri">
-
-      <label>API Key:</label>
-      <input type="text" placeholder="API Key">
-
-      <label>Secret Key (varsa):</label>
-      <input type="password" placeholder="Secret Key">
-
-      <label>Mağaza Logosu (URL):</label>
-      <input type="text" placeholder="https://...logo.png">
-
-      <div class="checkbox-group">
-        <label><input type="checkbox"> Yeni siparişlerde uyar</label>
-        <label><input type="checkbox"> Soru geldiğinde bildirim</label>
-        <label><input type="checkbox"> Kritik stok uyarısı</label>
+    <!-- Trendyol -->
+    <div class="dropdown">
+      <button onclick="toggleDropdown('trendyol-settings')">🛍️ Trendyol Ayarları</button>
+      <div id="trendyol-settings" class="dropdown-content">
+        <label>API Key</label>
+        <input type="text" placeholder="trendyol-api-key123" />
+        <label>Secret Key</label>
+        <input type="text" placeholder="trendyol-secret-456" />
+        <label>Mağaza Adı</label>
+        <input type="text" placeholder="Sirius Hobi - TY Mağaza" />
+        <button>Kaydet</button>
       </div>
-
-      <button onclick="alert('Ayarlar kaydedildi')">💾 Ayarları Kaydet</button>
     </div>
+
+    <!-- Hepsiburada -->
+    <div class="dropdown">
+      <button onclick="toggleDropdown('hb-settings')">📦 Hepsiburada Ayarları</button>
+      <div id="hb-settings" class="dropdown-content">
+        <label>API Key</label>
+        <input type="text" placeholder="hepsiburada-api-key789" />
+        <label>Secret Key</label>
+        <input type="text" placeholder="hepsiburada-secret-000" />
+        <label>Mağaza Adı</label>
+        <input type="text" placeholder="Sirius Hobi - HB Mağaza" />
+        <button>Kaydet</button>
+      </div>
+    </div>
+
+    <!-- Amazon -->
+    <div class="dropdown">
+      <button onclick="toggleDropdown('amazon-settings')">🌍 Amazon Ayarları</button>
+      <div id="amazon-settings" class="dropdown-content">
+        <label>API Key</label>
+        <input type="text" placeholder="amazon-key" />
+        <label>Secret Key</label>
+        <input type="text" placeholder="amazon-secret" />
+        <label>Mağaza Adı</label>
+        <input type="text" placeholder="Sirius Hobi - Amazon" />
+        <button>Kaydet</button>
+      </div>
+    </div>
+
   </div>
+
+  <script>
+    fetch("assets/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+      });
+
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
