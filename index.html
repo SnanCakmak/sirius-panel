@@ -86,5 +86,22 @@
       }
     });
   </script>
+  <script>
+  function login() {
+    const password = document.getElementById("password").value.trim();
+    const username = document.getElementById("username").value.trim();
+    if (username === "sinan" && password === "sinan") {
+      localStorage.setItem("giris", "ok");
+      window.location.href = "dashboard.html";
+    } else {
+      alert("Kullanıcı adı veya şifre hatalı!");
+    }
+  }
+
+  if (localStorage.getItem("giris") === "ok") {
+    window.location.href = "dashboard.html";
+  }
+</script>
+
 </body>
 </html>
