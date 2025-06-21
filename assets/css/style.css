@@ -1,2 +1,44 @@
+/* Sidebar ve Sayfa Düzeni */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f6fa;
+  display: flex;
+}
 
-/* Temel panel stilleri (boş bırakıldı, ihtiyaç olursa içerik eklenebilir) */
+.sidebar {
+  width: 240px;
+  background-color: #1f2b3d;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding-top: 30px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #3b4a5a;
+}
+
+.sidebar .submenu {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 30px;
+  width: calc(100% - 240px);
+}
