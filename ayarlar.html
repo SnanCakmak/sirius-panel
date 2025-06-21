@@ -1,42 +1,93 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Panel Ayarları – Sirius Panel</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayarlar – Sirius Panel</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .settings-form {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+      margin-top: 30px;
+    }
+
+    .settings-form label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 16px;
+    }
+
+    .settings-form input,
+    .settings-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .settings-form .checkbox-group {
+      margin-top: 20px;
+    }
+
+    .settings-form .checkbox-group label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .settings-form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .settings-form button:hover {
+      background-color: #357abd;
+    }
+  </style>
 </head>
 <body>
-  <h1>⚙️ Pazaryeri ve Panel Ayarları</h1>
+  <h1>⚙️ Panel & Entegrasyon Ayarları</h1>
+  <p>Mağaza bilgilerinizi ve pazaryeri entegrasyonlarını bu sayfadan yapılandırabilirsiniz.</p>
 
-  <form style="margin-top: 20px;">
-    <label>Pazaryeri Seçin:</label><br>
-    <select style="width: 100%;">
+  <div class="settings-form">
+    <label>Pazaryeri Seçin:</label>
+    <select>
       <option>Trendyol</option>
       <option>Hepsiburada</option>
       <option>N11</option>
       <option>PttAVM</option>
       <option>IdeaSoft</option>
-    </select><br><br>
+    </select>
 
-    <label>Mağaza Adı:</label><br>
-    <input type="text" placeholder="Örn: Sirius Hobi Malzemeleri" style="width: 100%;"><br><br>
+    <label>Mağaza Adı:</label>
+    <input type="text" placeholder="Örn: Sirius Hobi Malzemeleri">
 
-    <label>API Key:</label><br>
-    <input type="text" placeholder="API Key" style="width: 100%;"><br><br>
+    <label>API Key:</label>
+    <input type="text" placeholder="API Key">
 
-    <label>Secret Key (varsa):</label><br>
-    <input type="password" placeholder="Secret Key" style="width: 100%;"><br><br>
+    <label>Secret Key (varsa):</label>
+    <input type="password" placeholder="Secret Key">
 
-    <label>Mağaza Logosu (URL):</label><br>
-    <input type="text" placeholder="https://...logo.png" style="width: 100%;"><br><br>
+    <label>Mağaza Logosu (URL):</label>
+    <input type="text" placeholder="https://...logo.png">
 
-    <label>Bildirim Tercihleri:</label><br>
-    <input type="checkbox"> Yeni siparişlerde uyar<br>
-    <input type="checkbox"> Soru geldiğinde bildirim<br>
-    <input type="checkbox"> Kritik stok uyarısı<br><br>
+    <div class="checkbox-group">
+      <label><input type="checkbox"> Yeni siparişlerde uyar</label>
+      <label><input type="checkbox"> Soru geldiğinde bildirim</label>
+      <label><input type="checkbox"> Kritik stok uyarısı</label>
+    </div>
 
-    <button type="button" onclick="alert('Ayarlar kaydedildi')">💾 Ayarları Kaydet</button>
-  </form>
+    <button onclick="alert('Ayarlar kaydedildi')">💾 Ayarları Kaydet</button>
+  </div>
 </body>
 </html>
