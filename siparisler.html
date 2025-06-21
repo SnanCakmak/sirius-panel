@@ -3,13 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Siparişler – Sirius Panel</title>
+  <title>Sipariş Yönetimi – Sirius Panel</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .order-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .order-table th,
+    .order-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .order-table th {
+      background-color: #f1f1f1;
+    }
+
+    .order-table tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .badge {
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .kargolandı {
+      background-color: #e0f7e9;
+      color: #2d6a4f;
+    }
+
+    .hazırlanıyor {
+      background-color: #fff3cd;
+      color: #7a5800;
+    }
+
+    .bekliyor {
+      background-color: #fdecea;
+      color: #b02a37;
+    }
+
+    .order-table button {
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .order-table button:hover {
+      background-color: #357abd;
+    }
+  </style>
 </head>
 <body>
-  <h1>📋 Sipariş Yönetimi</h1>
+  <h1>🧾 Sipariş Yönetimi</h1>
+  <p>Son gelen siparişleri aşağıdan takip edebilirsiniz.</p>
 
-  <table border="1" cellpadding="10" cellspacing="0" style="margin-top: 20px; width: 100%; background-color: white;">
+  <table class="order-table">
     <thead>
       <tr>
         <th>Sipariş No</th>
@@ -19,7 +79,7 @@
         <th>Tutar</th>
         <th>Kargo</th>
         <th>Durum</th>
-        <th>İşlemler</th>
+        <th>İşlem</th>
       </tr>
     </thead>
     <tbody>
@@ -30,11 +90,8 @@
         <td>2</td>
         <td>258 TL</td>
         <td>MNG</td>
-        <td>Kargolandı</td>
-        <td>
-          <button>Detay</button>
-          <button>İade</button>
-        </td>
+        <td><span class="badge kargolandı">Kargolandı</span></td>
+        <td><button>Detay</button></td>
       </tr>
       <tr>
         <td>SP-00126</td>
@@ -43,11 +100,8 @@
         <td>1</td>
         <td>69 TL</td>
         <td>Yurtiçi</td>
-        <td>Hazırlanıyor</td>
-        <td>
-          <button>Detay</button>
-          <button>İptal</button>
-        </td>
+        <td><span class="badge hazırlanıyor">Hazırlanıyor</span></td>
+        <td><button>Detay</button></td>
       </tr>
       <tr>
         <td>SP-00127</td>
@@ -56,11 +110,8 @@
         <td>3</td>
         <td>687 TL</td>
         <td>Aras</td>
-        <td>Bekliyor</td>
-        <td>
-          <button>Detay</button>
-          <button>Düzenle</button>
-        </td>
+        <td><span class="badge bekliyor">Bekliyor</span></td>
+        <td><button>Detay</button></td>
       </tr>
     </tbody>
   </table>
