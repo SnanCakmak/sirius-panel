@@ -58,6 +58,13 @@
 </head>
 <body>
 
+  <!-- 🔐 Giriş kontrolü -->
+  <script>
+    if (localStorage.getItem("giris") !== "ok") {
+      window.location.href = "index.html";
+    }
+  </script>
+
   <div id="menu-placeholder"></div>
 
   <div class="main-content">
