@@ -4,20 +4,26 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f5f6fa;
   display: flex;
+  min-height: 100vh;
 }
 
+/* Sol Menü */
 .sidebar {
   width: 240px;
   background-color: #1f2b3d;
   color: white;
   height: 100vh;
   position: fixed;
+  top: 0;
+  left: 0;
   padding-top: 30px;
+  overflow-y: auto;
 }
 
 .sidebar h2 {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .sidebar a {
@@ -25,7 +31,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 12px 20px;
-  transition: 0.2s;
+  transition: background 0.2s ease;
 }
 
 .sidebar a:hover {
@@ -37,8 +43,10 @@ body {
   font-size: 14px;
 }
 
+/* Sayfa İçeriği */
 .main-content {
   margin-left: 240px;
   padding: 30px;
   width: calc(100% - 240px);
+  box-sizing: border-box;
 }
