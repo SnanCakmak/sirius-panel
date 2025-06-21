@@ -2,10 +2,47 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Müşteri Soruları – Sirius Panel</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      background-color: #f5f6fa;
+    }
+    .sidebar {
+      width: 240px;
+      background-color: #1f2b3d;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      padding-top: 30px;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background-color: #3b4a5a;
+    }
+    .sidebar .submenu {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+    .main-content {
+      margin-left: 240px;
+      padding: 30px;
+      width: calc(100% - 240px);
+    }
     .questions-table {
       width: 100%;
       border-collapse: collapse;
@@ -13,22 +50,18 @@
       background-color: #fff;
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     }
-
     .questions-table th,
     .questions-table td {
       padding: 12px;
       border: 1px solid #ddd;
       text-align: left;
     }
-
     .questions-table th {
       background-color: #f1f1f1;
     }
-
     .questions-table tr:hover {
       background-color: #f9f9f9;
     }
-
     .questions-table button {
       background-color: #4a90e2;
       color: #fff;
@@ -37,7 +70,6 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .quick-replies {
       margin-top: 40px;
       background-color: #fff;
@@ -45,67 +77,86 @@
       border-radius: 8px;
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     }
-
     .quick-replies ul {
       padding-left: 20px;
       margin-top: 10px;
     }
-
     .quick-replies li {
       margin-bottom: 8px;
     }
   </style>
 </head>
 <body>
-  <h1>💬 Müşteri Soruları</h1>
-  <p>En çok sorulan sorular ve yanıtlar burada listelenmiştir.</p>
+  <div class="sidebar">
+    <h2>Sirius Panel</h2>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="urunler.html">📦 Ürünler</a>
+    <div class="submenu">
+      <a href="#">- Ürün Yükle (devre dışı)</a>
+    </div>
+    <a href="siparisler.html">🧾 Siparişler</a>
+    <div class="submenu">
+      <a href="#">- İade Talepleri (yakında)</a>
+    </div>
+    <a href="sorular.html">💬 Sorular</a>
+    <a href="analizler.html">📈 Analizler</a>
+    <a href="seo-panel.html">🔍 SEO Paneli</a>
+    <a href="ayarlar.html">⚙️ Ayarlar</a>
+    <a href="moduller.html">🧩 Modüller</a>
+    <a href="index.html">🚪 Çıkış Yap</a>
+  </div>
 
-  <table class="questions-table">
-    <thead>
-      <tr>
-        <th>Soru No</th>
-        <th>Müşteri</th>
-        <th>Ürün</th>
-        <th>Soru</th>
-        <th>Cevap</th>
-        <th>İşlem</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>S-102</td>
-        <td>Betül K.</td>
-        <td>Epoksi Harf Kalıbı</td>
-        <td>Bu kalıp silikon mu?</td>
-        <td>Evet, %100 döküm silikonudur.</td>
-        <td><button>Düzenle</button></td>
-      </tr>
-      <tr>
-        <td>S-103</td>
-        <td>Emir A.</td>
-        <td>Neon Toz Boya</td>
-        <td>Karanlıkta parlıyor mu?</td>
-        <td>Hayır, UV ışıkta parlar.</td>
-        <td><button>Düzenle</button></td>
-      </tr>
-      <tr>
-        <td>S-104</td>
-        <td>Ayşegül Y.</td>
-        <td>UV Reçine Seti</td>
-        <td>Kurutma makinesi pakete dahil mi?</td>
-        <td>Evet, mini UV cihazı dahildir.</td>
-        <td><button>Düzenle</button></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="main-content">
+    <h1>💬 Müşteri Soruları</h1>
+    <p>En çok sorulan sorular ve yanıtlar burada listelenmiştir.</p>
 
-  <div class="quick-replies">
-    <h2>📌 Kayıtlı Cevaplar</h2>
-    <ul>
-      <li>“Ürünümüz döküm için uygundur.”</li>
-      <li>“Stoklarımız günceldir, güvenle sipariş verebilirsiniz.”</li>
-      <li>“Siparişiniz aynı gün kargoya verilir.”</li>
-    </ul>
+    <table class="questions-table">
+      <thead>
+        <tr>
+          <th>Soru No</th>
+          <th>Müşteri</th>
+          <th>Ürün</th>
+          <th>Soru</th>
+          <th>Cevap</th>
+          <th>İşlem</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>S-102</td>
+          <td>Betül K.</td>
+          <td>Epoksi Harf Kalıbı</td>
+          <td>Bu kalıp silikon mu?</td>
+          <td>Evet, %100 döküm silikonudur.</td>
+          <td><button>Düzenle</button></td>
+        </tr>
+        <tr>
+          <td>S-103</td>
+          <td>Emir A.</td>
+          <td>Neon Toz Boya</td>
+          <td>Karanlıkta parlıyor mu?</td>
+          <td>Hayır, UV ışıkta parlar.</td>
+          <td><button>Düzenle</button></td>
+        </tr>
+        <tr>
+          <td>S-104</td>
+          <td>Ayşegül Y.</td>
+          <td>UV Reçine Seti</td>
+          <td>Kurutma makinesi pakete dahil mi?</td>
+          <td>Evet, mini UV cihazı dahildir.</td>
+          <td><button>Düzenle</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="quick-replies">
+      <h2>📌 Kayıtlı Cevaplar</h2>
+      <ul>
+        <li>“Ürünümüz döküm için uygundur.”</li>
+        <li>“Stoklarımız günceldir, güvenle sipariş verebilirsiniz.”</li>
+        <li>“Siparişiniz aynı gün kargoya verilir.”</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
