@@ -6,64 +6,108 @@
   <title>Dashboard – Sirius Entegrasyon</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6fa;
+      margin: 0;
+      padding: 0;
+    }
     .main-content {
       margin-left: 240px;
       padding: 30px;
-      width: calc(100% - 240px);
     }
-    .dashboard-header {
+    .panel-title {
       font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
-    .widget-container {
+    .info-boxes {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      margin-bottom: 20px;
     }
-    .widget-box {
-      background-color: #fff;
+    .box {
+      background: white;
       padding: 20px;
       border-radius: 8px;
-      flex: 1 1 300px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 200px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
     }
-    .widget-box h3 {
-      margin: 0 0 10px;
-      color: #333;
-      font-size: 18px;
-    }
-    .widget-box p {
+    .box h2 {
       margin: 0;
+      font-size: 20px;
+    }
+    .box p {
+      margin: 5px 0 0;
       color: #555;
+    }
+    .footer-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .footer-box button {
+      background-color: #4a90e2;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .footer-box span {
       font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
+  <!-- Menü buraya yüklenecek -->
   <div id="menu-placeholder"></div>
 
   <div class="main-content">
-    <div class="dashboard-header">📊 Sirius Entegrasyon – Yönetim Paneli</div>
+    <div class="panel-title">🚀 Sirius Entegrasyon Ana Sayfa</div>
 
-    <div class="widget-container">
-      <div class="widget-box">
-        <h3>🛒 Toplam Sipariş</h3>
-        <p>143 sipariş alındı</p>
+    <!-- Üst kutucuklar -->
+    <div class="info-boxes">
+      <div class="box">
+        <h2>32</h2>
+        <p>Günlük Sipariş</p>
       </div>
-      <div class="widget-box">
-        <h3>💬 Yeni Sorular</h3>
-        <p>4 soru yanıt bekliyor</p>
+      <div class="box">
+        <h2>5</h2>
+        <p>Gelen Sorular</p>
       </div>
-      <div class="widget-box">
-        <h3>⚠️ Stok Uyarısı</h3>
-        <p>3 ürün kritik seviyede</p>
+      <div class="box">
+        <h2>5 ürün</h2>
+        <p>Düşük Stok</p>
       </div>
-      <div class="widget-box">
-        <h3>🚀 Aktif Kampanyalar</h3>
-        <p>2 kampanya aktif</p>
+    </div>
+
+    <!-- Alt kutucuklar -->
+    <div class="info-boxes">
+      <div class="box">
+        <h2>Yükselen Ürünler</h2>
+        <p>1. Ürün 1<br>2. Ürün 2<br>3. Ürün 3</p>
       </div>
+      <div class="box">
+        <h2>Satış Özeti (7 Gün)</h2>
+        <p>[Grafik örneği – yer tutucu]</p>
+      </div>
+      <div class="box">
+        <h2>Satışı Düşen Ürünler</h2>
+        <p>Ürün A, Ürün B</p>
+      </div>
+    </div>
+
+    <!-- Footer kutusu -->
+    <div class="footer-box">
+      <button>Excel ile Ürün Güncelle</button>
+      <span>🔔 2 saat önce</span>
     </div>
   </div>
 
