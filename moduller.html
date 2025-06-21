@@ -3,135 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modüller – Sirius Panel</title>
+  <title>Modüller – Sirius Entegrasyon</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      background-color: #f5f6fa;
-    }
-    .sidebar {
-      width: 240px;
-      background-color: #1f2b3d;
-      color: white;
-      height: 100vh;
-      position: fixed;
-      padding-top: 30px;
-    }
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      transition: 0.2s;
-    }
-    .sidebar a:hover {
-      background-color: #3b4a5a;
-    }
-    .sidebar .submenu {
-      padding-left: 20px;
-      font-size: 14px;
+      background-color: #f4f6fa;
     }
     .main-content {
       margin-left: 240px;
       padding: 30px;
-      width: calc(100% - 240px);
     }
-    .module-grid {
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .module-list {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 20px;
-      margin-top: 30px;
     }
-    .module-box {
-      background-color: #fff;
-      flex: 1 1 calc(33.333% - 20px);
-      min-width: 250px;
+    .modul-box {
+      background-color: white;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 6px rgba(0,0,0,0.05);
-      border-left: 5px solid #4a90e2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .module-box h3 {
-      margin-top: 0;
+    .modul-info h2 {
       font-size: 18px;
-      color: #333;
+      margin: 0 0 6px 0;
     }
-    .module-box p {
-      color: #555;
+    .modul-info p {
       font-size: 14px;
+      margin: 0;
+      color: #555;
     }
-    @media (max-width: 768px) {
-      .module-box {
-        flex: 1 1 100%;
-      }
+    .modul-box button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .modul-box button:hover {
+      background-color: #357abd;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Sirius Panel</h2>
-    <a href="dashboard.html">📊 Dashboard</a>
-    <a href="urunler.html">📦 Ürünler</a>
-    <div class="submenu">
-      <a href="#">- Ürün Yükle (devre dışı)</a>
-    </div>
-    <a href="siparisler.html">🧾 Siparişler</a>
-    <div class="submenu">
-      <a href="#">- İade Talepleri (yakında)</a>
-    </div>
-    <a href="sorular.html">💬 Sorular</a>
-    <a href="analizler.html">📈 Analizler</a>
-    <a href="seo-panel.html">🔍 SEO Paneli</a>
-    <a href="ayarlar.html">⚙️ Ayarlar</a>
-    <a href="moduller.html">🧩 Modüller</a>
-    <a href="index.html">🚪 Çıkış Yap</a>
-  </div>
+
+  <div id="menu-placeholder"></div>
 
   <div class="main-content">
-    <h1>🧩 Gelişmiş Modüller</h1>
-    <p>Panelde aktif veya geliştirilmekte olan tüm modülleri buradan görüntüleyebilirsiniz.</p>
+    <h1>🧩 Entegrasyon Modülleri</h1>
 
-    <div class="module-grid">
-      <div class="module-box">
-        <h3>📌 Yorum & Puan Takibi</h3>
-        <p>Ürünlere gelen yorum ve puanlar anlık olarak analiz edilir.</p>
+    <div class="module-list">
+      <div class="modul-box">
+        <div class="modul-info">
+          <h2>🔔 Yorum & Puan Takibi</h2>
+          <p>Ürünlere gelen yorumları ve puanları panelden takip edin.</p>
+        </div>
+        <button>Ayarla</button>
       </div>
-      <div class="module-box">
-        <h3>📦 Stok Dağıtımı</h3>
-        <p>Tek ürün farklı pazaryerlerine bölünerek yüklenebilir.</p>
+
+      <div class="modul-box">
+        <div class="modul-info">
+          <h2>⚖️ Rekabetçi Fiyat Takibi</h2>
+          <p>Rakip fiyatları analiz ederek otomatik karşılaştırmalar yapın.</p>
+        </div>
+        <button>Ayarla</button>
       </div>
-      <div class="module-box">
-        <h3>🎯 Rakip Fiyat Takibi</h3>
-        <p>Rakip fiyatlar izlenerek fiyat optimizasyonu sağlanır.</p>
+
+      <div class="modul-box">
+        <div class="modul-info">
+          <h2>📦 Stok Dağıtım</h2>
+          <p>Stoklarınızı tüm pazaryerlerine eşit şekilde dağıtın.</p>
+        </div>
+        <button>Ayarla</button>
       </div>
-      <div class="module-box">
-        <h3>🖼️ Görsel Optimizasyonu</h3>
-        <p>Yüklenen ürün görselleri otomatik sıkıştırılır ve düzenlenir.</p>
+
+      <div class="modul-box">
+        <div class="modul-info">
+          <h2>🎯 Çok Satanlar Otomasyonu</h2>
+          <p>En çok satan ürünleri kampanyaya otomatik olarak dahil edin.</p>
+        </div>
+        <button>Ayarla</button>
       </div>
-      <div class="module-box">
-        <h3>🔥 Çok Satanlar Otomasyonu</h3>
-        <p>En çok satan ürünler otomatik olarak öne çıkarılır.</p>
-      </div>
-      <div class="module-box">
-        <h3>🛠️ SEO Açıklama Üretimi</h3>
-        <p>Yapay zekâ destekli SEO uyumlu açıklama üretir (aktif).</p>
-      </div>
-      <div class="module-box">
-        <h3>⚠️ Satışı Düşen Ürünler</h3>
-        <p>Satışı azalan ürünlere özel uyarılar ve kampanya önerileri sunar.</p>
-      </div>
-      <div class="module-box">
-        <h3>🤖 Akıllı Analiz Botu</h3>
-        <p>“Bu ürün satmıyor, görseli güncelle” gibi direkt öneriler sunar.</p>
+
+      <div class="modul-box">
+        <div class="modul-info">
+          <h2>📷 Görsel Optimizasyon</h2>
+          <p>Ürün görsellerinizde kalite analizi ve öneriler alın.</p>
+        </div>
+        <button>Ayarla</button>
       </div>
     </div>
   </div>
+
+  <script>
+    fetch("assets/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+      });
+  </script>
+
 </body>
 </html>
