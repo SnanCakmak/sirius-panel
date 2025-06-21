@@ -1,2 +1,42 @@
-<!-- ayarlar.html - SiriusPanel v2 -->
-<html><head><title>ayarlar.html</title></head><body>ayarlar.html içeriği burada olacak.</body></html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel Ayarları – Sirius Panel</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <h1>⚙️ Pazaryeri ve Panel Ayarları</h1>
+
+  <form style="margin-top: 20px;">
+    <label>Pazaryeri Seçin:</label><br>
+    <select style="width: 100%;">
+      <option>Trendyol</option>
+      <option>Hepsiburada</option>
+      <option>N11</option>
+      <option>PttAVM</option>
+      <option>IdeaSoft</option>
+    </select><br><br>
+
+    <label>Mağaza Adı:</label><br>
+    <input type="text" placeholder="Örn: Sirius Hobi Malzemeleri" style="width: 100%;"><br><br>
+
+    <label>API Key:</label><br>
+    <input type="text" placeholder="API Key" style="width: 100%;"><br><br>
+
+    <label>Secret Key (varsa):</label><br>
+    <input type="password" placeholder="Secret Key" style="width: 100%;"><br><br>
+
+    <label>Mağaza Logosu (URL):</label><br>
+    <input type="text" placeholder="https://...logo.png" style="width: 100%;"><br><br>
+
+    <label>Bildirim Tercihleri:</label><br>
+    <input type="checkbox"> Yeni siparişlerde uyar<br>
+    <input type="checkbox"> Soru geldiğinde bildirim<br>
+    <input type="checkbox"> Kritik stok uyarısı<br><br>
+
+    <button type="button" onclick="alert('Ayarlar kaydedildi')">💾 Ayarları Kaydet</button>
+  </form>
+</body>
+</html>
