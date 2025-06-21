@@ -2,71 +2,67 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard – Sirius Panel</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    .dashboard-container {
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 40px;
+      background-color: #f5f6fa;
     }
-    .dashboard-box {
+    .main-content {
+      margin-left: 240px;
+      padding: 30px;
+      width: calc(100% - 240px);
+    }
+    .widget-box {
       background-color: #fff;
-      border: 1px solid #ddd;
-      border-left: 5px solid #4a90e2;
       padding: 20px;
       border-radius: 8px;
-      width: calc(33.333% - 20px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease;
+      margin-bottom: 20px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     }
-    .dashboard-box:hover {
-      transform: scale(1.02);
-    }
-    .dashboard-box h2 {
-      font-size: 28px;
-      margin: 0;
+    .widget-box h2 {
+      margin-top: 0;
+      font-size: 18px;
       color: #333;
-    }
-    .dashboard-box p {
-      margin-top: 10px;
-      color: #666;
-      font-size: 15px;
-    }
-    @media (max-width: 768px) {
-      .dashboard-box {
-        width: 100%;
-      }
     }
   </style>
 </head>
 <body>
-  <h1>📊 Sirius Panel Anasayfa</h1>
-  <p>Son giriş: 21.06.2025 – 13:30</p>
 
-  <div class="dashboard-container">
-    <div class="dashboard-box">
-      <h2>147</h2>
-      <p>Toplam Sipariş</p>
+  <!-- Sidebar dışarıdan buraya yüklenecek -->
+  <div id="menu-placeholder"></div>
+
+  <div class="main-content">
+    <h1>📊 Sirius Yönetim Paneli</h1>
+
+    <div class="widget-box">
+      <h2>Toplam Sipariş: 143</h2>
+      <p>Son 7 gün içinde 38 sipariş alındı.</p>
     </div>
-    <div class="dashboard-box">
-      <h2>12</h2>
-      <p>Bugünkü Satış</p>
+
+    <div class="widget-box">
+      <h2>Yeni Gelen Sorular</h2>
+      <p>4 yeni müşteri sorusu yanıt bekliyor.</p>
     </div>
-    <div class="dashboard-box">
-      <h2>5</h2>
-      <p>Kritik Stok</p>
-    </div>
-    <div class="dashboard-box">
-      <h2>3</h2>
-      <p>Yeni Müşteri</p>
-    </div>
-    <div class="dashboard-box">
-      <h2>8</h2>
-      <p>Yeni Soru</p>
+
+    <div class="widget-box">
+      <h2>Stok Uyarısı</h2>
+      <p>3 ürün kritik stok seviyesinde.</p>
     </div>
   </div>
+
+  <!-- Sidebar'ı içeri çeken JS kodu -->
+  <script>
+    fetch("assets/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+      });
+  </script>
+
 </body>
 </html>
