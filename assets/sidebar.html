@@ -1,4 +1,3 @@
-
 <div class="sidebar">
   <h2>Sirius Panel</h2>
   <a href="dashboard.html">📊 Dashboard</a>
@@ -15,5 +14,12 @@
   <a href="seo-panel.html">🔍 SEO Paneli</a>
   <a href="ayarlar.html">⚙️ Ayarlar</a>
   <a href="moduller.html">🧩 Modüller</a>
-  <a href="cikis.html">🚪 Çıkış Yap</a>
+  <a href="#" onclick="logout()">🚪 Çıkış Yap</a>
 </div>
+
+<script>
+  function logout() {
+    localStorage.removeItem("giris");
+    window.location.href = "index.html";
+  }
+</script>
