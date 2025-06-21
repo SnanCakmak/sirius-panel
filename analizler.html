@@ -3,130 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Analizler – Sirius Panel</title>
+  <title>Analizler – Sirius Entegrasyon</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      background-color: #f5f6fa;
-    }
-    .sidebar {
-      width: 240px;
-      background-color: #1f2b3d;
-      color: white;
-      height: 100vh;
-      position: fixed;
-      padding-top: 30px;
-    }
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      transition: 0.2s;
-    }
-    .sidebar a:hover {
-      background-color: #3b4a5a;
-    }
-    .sidebar .submenu {
-      padding-left: 20px;
-      font-size: 14px;
+      background-color: #f4f6fa;
     }
     .main-content {
       margin-left: 240px;
       padding: 30px;
-      width: calc(100% - 240px);
     }
-    .section-box {
-      background-color: #fff;
-      padding: 25px;
-      margin-top: 30px;
+    .main-content h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .panel {
+      background-color: white;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+      margin-bottom: 25px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     }
-    .section-box h2 {
-      margin-top: 0;
-      font-size: 20px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
+    .panel h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
       color: #333;
     }
-    .section-box ul {
-      padding-left: 20px;
-      margin-top: 10px;
+    .panel ul {
+      list-style: none;
+      padding: 0;
     }
-    .section-box li {
-      margin-bottom: 10px;
+    .panel ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .badge {
-      display: inline-block;
+    .panel ul li:last-child {
+      border-bottom: none;
+    }
+    .panel button {
+      padding: 6px 12px;
       font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-left: 6px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4a90e2;
+      color: white;
+      cursor: pointer;
     }
-    .up { background-color: #e0f7e9; color: #2d6a4f; }
-    .down { background-color: #fdecea; color: #b02a37; }
-    .ai { background-color: #e6f0ff; color: #2458a1; }
+    .panel button:hover {
+      background-color: #357abd;
+    }
+    .ai-note {
+      background-color: #fff8dc;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-size: 13px;
+      color: #333;
+    }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Sirius Panel</h2>
-    <a href="dashboard.html">📊 Dashboard</a>
-    <a href="urunler.html">📦 Ürünler</a>
-    <div class="submenu">
-      <a href="#">- Ürün Yükle (devre dışı)</a>
-    </div>
-    <a href="siparisler.html">🧾 Siparişler</a>
-    <div class="submenu">
-      <a href="#">- İade Talepleri (yakında)</a>
-    </div>
-    <a href="sorular.html">💬 Sorular</a>
-    <a href="analizler.html">📈 Analizler</a>
-    <a href="seo-panel.html">🔍 SEO Paneli</a>
-    <a href="ayarlar.html">⚙️ Ayarlar</a>
-    <a href="moduller.html">🧩 Modüller</a>
-    <a href="index.html">🚪 Çıkış Yap</a>
-  </div>
+
+  <div id="menu-placeholder"></div>
 
   <div class="main-content">
-    <h1>📈 Satış & Ürün Performans Analizi</h1>
-    <p>Bu sayfada son dönem satış verileri ve analiz önerileri yer almaktadır.</p>
+    <h1>📊 Ürün Analizleri</h1>
 
-    <div class="section-box">
-      <h2>🚀 En Çok Satan Ürünler (7 Gün)</h2>
+    <!-- Yükselen Ürünler -->
+    <div class="panel">
+      <h2>🚀 Yükselen Ürünler (Son 7 Gün)</h2>
       <ul>
-        <li>UV Reçine Seti <span class="badge up">48 satış</span></li>
-        <li>Epoksi Harf Kalıbı <span class="badge up">32 satış</span></li>
-        <li>Neon Toz Boya <span class="badge up">27 satış</span></li>
+        <li>
+          UV Reçine Seti
+          <button>Ayrıntılar</button>
+        </li>
+        <li>
+          Şeffaf Silikon Kalıp
+          <button>Ayrıntılar</button>
+        </li>
+        <li>
+          Taş Tozu Pigment
+          <button>Ayrıntılar</button>
+        </li>
       </ul>
     </div>
 
-    <div class="section-box">
+    <!-- Satışı Düşen Ürünler -->
+    <div class="panel">
       <h2>📉 Satışı Düşen Ürünler</h2>
       <ul>
-        <li>Epoksi Bardak Altlığı Kalıbı <span class="badge down">0 satış</span></li>
-        <li>Şeffaf Asetat <span class="badge down">1 satış</span></li>
-        <li>Cam Efektli Pigment <span class="badge down">2 satış</span></li>
+        <li>
+          Mavi Opak Pigment
+          <button>Kampanya Yap</button>
+        </li>
+        <li>
+          Eski Tip Kalıp Seti
+          <button>Görsel Güncelle</button>
+        </li>
+        <li>
+          Çiçekli Kupa Kalıbı
+          <button>Açıklama Yenile</button>
+        </li>
       </ul>
     </div>
 
-    <div class="section-box">
-      <h2>🤖 Yapay Zekâ Önerileri</h2>
+    <!-- Yapay Zeka Önerileri -->
+    <div class="panel">
+      <h2>🧠 Yapay Zeka Yorumları</h2>
       <ul>
-        <li><span class="badge ai">AI</span> Bardak altlığı kalıbında hiç satış yok, görsel güncellenmeli.</li>
-        <li><span class="badge ai">AI</span> Neon boya çok satıyor, ana sayfada öne çıkarılmalı.</li>
-        <li><span class="badge ai">AI</span> Açıklaması kısa olan ürünler güncellenmeli.</li>
+        <li>
+          <div>
+            🌑 "Bu üründe hiç sipariş yok. Açıklamayı güncellemeyi düşünebilirsiniz."
+            <div class="ai-note">💡 İpucu: Başlıkta kullanım alanı ekleyin.</div>
+          </div>
+          <button>SEO Açıklama Yaz</button>
+        </li>
+        <li>
+          <div>
+            📷 "Bu ürün çok görüntüleniyor ama az satıyor. Görseli değiştirin."
+            <div class="ai-note">💡 İpucu: Uygulamalı görsel ekleyin.</div>
+          </div>
+          <button>Görsel Güncelle</button>
+        </li>
       </ul>
     </div>
+
   </div>
+
+  <script>
+    fetch("assets/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+      });
+  </script>
+
 </body>
 </html>
